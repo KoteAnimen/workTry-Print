@@ -6,21 +6,52 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>242</width>
-    <height>193</height>
+    <width>275</width>
+    <height>385</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QGroupBox" name="groupBox">
     <property name="geometry">
      <rect>
-      <x>20</x>
+      <x>10</x>
+      <y>10</y>
+      <width>251</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="title">
+     <string>Загрузка DataMatrix</string>
+    </property>
+    <widget class="QPushButton" name="Download">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>231</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Загрузить</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
       <y>110</y>
-      <width>201</width>
-      <height>41</height>
+      <width>251</width>
+      <height>80</height>
      </rect>
     </property>
     <property name="font">
@@ -28,27 +59,27 @@
       <pointsize>12</pointsize>
      </font>
     </property>
-    <property name="text">
-     <string>Печать!!!</string>
+    <property name="title">
+     <string>Ввод подписи</string>
     </property>
+    <widget class="QLineEdit" name="lineEdit">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>231</width>
+       <height>41</height>
+      </rect>
+     </property>
+    </widget>
    </widget>
-   <widget class="QLineEdit" name="lineEdit">
+   <widget class="QGroupBox" name="groupBox_3">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>60</y>
-      <width>201</width>
-      <height>41</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>33</y>
-      <width>201</width>
-      <height>20</height>
+      <x>10</x>
+      <y>190</y>
+      <width>251</width>
+      <height>151</height>
      </rect>
     </property>
     <property name="font">
@@ -56,9 +87,37 @@
       <pointsize>12</pointsize>
      </font>
     </property>
-    <property name="text">
-     <string>Введите текст для печати</string>
+    <property name="title">
+     <string>Номер DataMatrix</string>
     </property>
+    <widget class="QPushButton" name="pushButton">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>90</y>
+       <width>231</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Печать!!!</string>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="numberDataMatrix">
+     <property name="geometry">
+      <rect>
+       <x>11</x>
+       <y>40</y>
+       <width>231</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -66,7 +125,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>242</width>
+     <width>275</width>
      <height>21</height>
     </rect>
    </property>
