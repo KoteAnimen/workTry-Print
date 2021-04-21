@@ -14,10 +14,8 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-
-void MainWindow::on_pushButton_clicked()
+void MainWindow::Print(QString str)
 {
-    str = QString("^XA") + QString("^FO 200,100") + QString("^FB400,2,10,C,0") + QString("^ASN,10,10") + QString("^FD") + QString(ui->lineEdit->text()) + QString("^FS") + QString("^XZ");
     QByteArray array = str.toUtf8();
     QAbstractSocket *socket;
     socket = new QAbstractSocket(QAbstractSocket::TcpSocket, this);
@@ -49,5 +47,17 @@ void MainWindow::on_pushButton_clicked()
     QString::fromUtf8("<font size='16'>Ошибка доступа к принтеру! Проверьте питания принтера!</font>"));
     }
     socket->disconnectFromHost();
+}
 
+
+void MainWindow::on_pushButton_clicked()
+{
+    Print(QString("^XA")
+          + QString("^FO 200,100")
+          + QString("^FB400,2,10,C,0")
+          + QString("^ASN,10,10")
+          + QString("^FD")
+          + QString(ui->lineEdit->text())
+          + QString("^FS")
+          + QString("^XZ"));
 }
